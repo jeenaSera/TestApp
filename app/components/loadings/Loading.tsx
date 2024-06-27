@@ -27,7 +27,7 @@ function Loading(props: Props) {
         },
         Style,
       ]}>
-      <ActivityIndicator size="large" color={Color ? Color : Colors.blue} />
+      <ActivityIndicator size="large" color={Color ? Color : Colors.darkBlue} />
     </View>
   );
 }

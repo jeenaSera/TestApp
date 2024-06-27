@@ -5,10 +5,14 @@ import IconForm from '../icon/IconForm';
 import Dashboard from '../screens/tabs/Dashboard';
 import Profile from '../screens/tabs/profile';
 import MarketData from '../screens/tabs/MarketData';
+import Lexicons from '../lexicons/Lexicons';
+import {ImageSourcePropType} from 'react-native';
 
 export type BottomStackParamList = {
   dashboard: undefined;
-  profile: undefined;
+  profile: {
+    image: ImageSourcePropType;
+  };
   marketData: undefined;
 };
 
@@ -20,7 +24,7 @@ export function DashboardBottomBar() {
       {
         <Tab.Navigator
           screenOptions={({route}) => ({
-            tabBarActiveTintColor: Colors.blue,
+            tabBarActiveTintColor: Colors.darkBlue,
             tabBarInactiveTintColor: Colors.grey,
             tabBarIcon: ({focused, color}) => {
               let iconName: IconProp = 'home';
@@ -41,7 +45,7 @@ export function DashboardBottomBar() {
             component={Dashboard}
             options={{
               headerShown: false,
-              title: 'Dashboard',
+              title: Lexicons.dashboard,
               headerTintColor: Colors.black,
               tabBarAllowFontScaling: false,
               tabBarItemStyle: {margin: 5},
@@ -52,7 +56,7 @@ export function DashboardBottomBar() {
             component={MarketData}
             options={{
               headerShown: false,
-              title: 'Market Data',
+              title: Lexicons.marketData,
               headerTintColor: Colors.black,
               tabBarAllowFontScaling: false,
               tabBarItemStyle: {margin: 5},
@@ -63,7 +67,7 @@ export function DashboardBottomBar() {
             component={Profile}
             options={{
               headerShown: false,
-              title: 'Profile',
+              title: Lexicons.profile,
               headerTintColor: Colors.black,
               tabBarAllowFontScaling: false,
               tabBarItemStyle: {margin: 5},

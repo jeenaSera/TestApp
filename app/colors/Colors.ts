@@ -3,7 +3,9 @@ export default {
   white: 'white',
   black: 'black',
   red: 'red',
-  blue: '#074D8D',
+  darkBlue: '#074D8D',
+  blue: 'blue',
   yellow: 'yellow',
   grey: 'grey',
+  lightBlue: 'lightblue',
 };
