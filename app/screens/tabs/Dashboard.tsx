@@ -20,8 +20,6 @@ import Loading from '../../components/loadings/Loading';
 import Carousel from 'react-native-snap-carousel';
 import ImageCard from '../../components/cards/ImageCard';
 import {NetworkInfo} from 'react-native-network-info';
-import {useNetInfo} from '@react-native-community/netinfo';
-import axios from 'axios';
 import ErrorMessage from '../../components/messages/ErrorMessage';
 
 type Props = NativeStackScreenProps<BottomStackParamList, 'dashboard'>;
@@ -32,7 +30,6 @@ export default function Dashboard(props: Props) {
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string>();
   const [data, setData] = useState<APIDto>();
-  const netInfo = useNetInfo();
   const [images] = useState([
     {
       image: require('../../assets/image1.jpg'),
@@ -46,9 +43,7 @@ export default function Dashboard(props: Props) {
   ]);
 
   //get current IP address
-  NetworkInfo.getIPAddress().then(ipAddress => {
-    console.log(ipAddress!);
-  });
+  NetworkInfo.getIPAddress().then(ipAddress => {});
 
   const load = async () => {
     setLoading(true);

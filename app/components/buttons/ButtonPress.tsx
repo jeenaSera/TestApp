@@ -5,7 +5,6 @@ import {
   ViewStyle,
   StyleProp,
   TextStyle,
-  ActivityIndicator,
 } from 'react-native';
 import React from 'react';
 import TextLabel from '../labels/TextLabel';

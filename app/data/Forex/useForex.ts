@@ -3,7 +3,6 @@ import URL from '../../httpClient/URL';
 
 const getRate = async () => {
   const res = await apiClient.getJson(`${URL.forex}`);
-  console.log(res, 'res');
   return res;
 };
 
