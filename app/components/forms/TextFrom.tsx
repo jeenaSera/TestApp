@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
     marginBottom: '10%',
   },
   inputText: {
+    color: Colors.black,
     width: '80%',
     borderRadius: 10,
     padding: Platform.OS == 'ios' ? 15 : 5,
